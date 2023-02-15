@@ -1,0 +1,72 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #defff0;
+}
+
+#titulo{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #029c55;
+    margin-left: 50px;
+    margin-top: -50px;
+    font-size: 30px;
+}
+
+.figure-caption{
+    text-align: center;
+    color: #029c55;
+}
+
+#home{
+    color: #029c55;
+}
+
+#navbarDropdownMenuLink{
+    color: #029c55;
+}
+
+.dropdown-item{
+    color: #0045c5;
+}
+
+.container-fluid{
+    background-color: #ffe678;
+}
+
+#navbar{
+    position: absolute;
+    top: -0.6em;
+}
+
+#juncao{
+    background-color: #ffe678;
+}
+
+.accordion-body{
+    color: #0045c5;
+    background-color: #fffeea;
+}
+
+.accordion-button{
+    background-color: #ffe678;
+    color: #019c54 ;
+}
+
+.texto-accordion{
+    text-align: justify;
+}
+
+.titulo{
+    color:#0045c5;
+}
+
+.texto{
+    color:#002e84;
+}
+
+li{
+    text-align: justify;
+}
+
+#imagem{
+    float: right;
+}

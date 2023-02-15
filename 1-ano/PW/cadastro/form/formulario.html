@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+    <title>Cadastro</title>
+</head>
+
+<body>
+  <div class="campo">
+      <h1 id="titulo">Cadastro</h1>
+      <p id="subtitulo">Registro para o Trabalho de PW I</p>
+      <br>
+  </div>   
+
+  <form>
+      <fieldset class="grupo">
+          <div class="campo">
+              <label for="nome"><b>Nome</b></label>
+              <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+          </div>
+          <div class="campo">
+              <label for="sobrenome"><b>Sobrenome</b></label>
+              <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu sobrenome" required>
+          </div>
+          <div class="campo">
+            <label><b>Gênero</b></label>
+            <input type="radio" name="genre" id="masc"> Masculino
+            <input type="radio" name="genre" id="fem"> Feminino
+            
+        </div>
+      </fieldset>
+      
+          <fieldset class="grupo">
+              <div class="campo">
+          <label for="email"><b>Email</b></label>
+          <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+        </div>
+        <div class="campo"> 
+            <label><b>Senha</b></label>
+            <input type="text" name="senha" id="senha" placeholder="Digite sua senha">
+        </div>
+        </fieldset>
+     
+    <fieldset class="grupo">
+      <div id="check">
+          <label><strong>Assinale seu setor profissional</strong></label><br>
+             <input type="checkbox" name="devsofware" value="devsofware" id="devsofware"> 
+             <label for="devsoftware"> Desenvolvedor de Software</label><br>
+             <input type="checkbox" name="admdado" value="admdado" id="admdado">
+             <label for="admdado"> Administrador de Banco de Dados</label><br> 
+             <input type="checkbox" name="TI" value="TI" id="TI">  
+             <label for=TI> Infraestrutura de TI</label><br>
+             <input type="checkbox" name="study" value="study" id="study"> 
+             <label for="study"> Estudante</label><br> 
+             <input type="checkbox" name="others" value="others" id="others"> 
+             <label for="others"> Outro</label>
+             <input type="text" id="others" id="others" placeholder="Especifique a área">    
+        </div>
+    </fieldset>
+            <p>⠀⠀⠀</p>
+    <fieldset class="grupo">
+        <div class="campo">
+            <label><b>Escolaridade</b></label>
+            <select id="escolaridade">
+                <option selected disabled value="">Selecione</option>
+                <option>Fundamental</option>
+                <option>Médio</option>
+                <option>Superior</option>
+            </select>
+        </div>
+    </fieldset>
+        <button class="botao" type="submite">Enviar</button>
+  </form>
+</body>
+</html>

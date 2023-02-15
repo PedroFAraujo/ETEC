@@ -1,0 +1,46 @@
+header{
+    color: #790000;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25em;
+}
+
+#subtitulo{
+    color: #660000;
+    margin-left: 5em;
+    margin-right: auto;
+    width: 0em
+}
+
+body{
+    background-color: #ffecec;
+    font-family: Arial;
+}
+
+h3{
+    font-size:larger;
+    color: #a90808;
+}
+
+fieldset{
+    background-color: #f8e1e1;
+    border: 0;
+}
+
+p{
+    font-size: 18px;
+    color: #330000;
+}
+
+footer{
+    font-size: medium;
+    margin-top:3.3em;
+    margin-left:0.5em;
+    color: #330000
+}
+
+#resumo{
+    margin-left: 12em;
+    margin-right: auto;
+    width: 65em  
+}
