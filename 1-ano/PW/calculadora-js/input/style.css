@@ -1,0 +1,16 @@
+body{
+    font: normal 20pt Arial, sans-serif;
+    text-align: center;
+}
+
+input#txtn1, input#txtn2{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input#botao{
+    width: 100px;
+    height: 25px;
+}

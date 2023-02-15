@@ -1,0 +1,40 @@
+body{
+    font: normal 20pt arial;
+    text-align: center;
+}
+
+#txtn1, #txtn2{
+    font-size: 17pt;
+    margin-bottom: 20pt;
+    width: 150px;
+}
+
+#botao{
+    height: 30px;
+    width: 100px;
+}
+
+a{
+    margin: 40px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a:hover{
+    background-color: rgba(206, 243, 255, 0.466);
+    color: rgb(0, 0, 70);
+    transition-duration: 0.5s;
+}
+
+a#botao-multi{
+    margin: 20px;
+}
+
+
+p#line1{
+    margin-bottom: 60px;
+}
+
