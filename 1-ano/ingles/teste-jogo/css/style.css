@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+
+
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.col{
+    margin: 1px solid darkblue;
+}
+
+h1#desemprego{
+    text-align: center;
+    vertical-align: middle;
+    font-size: 3em;
+}
+
+p#lost{
+    font-size: 2em;
+    text-align: center;
+}
+
+a.opcao{
+    font-size: 2em;
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+div > a:hover{
+    background-color: transparent;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.img:hover{
+    background-color: lightgray;
+}
+
+.img{
+    width: 100%;
+}
+
+.container{
+    min-width: 300px;
+    max-width: 800px;
+}
+
+img.pequena{
+    width: 40%;
+}
