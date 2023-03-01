@@ -5,6 +5,12 @@ fun main() {
     val nome = teclado.next()
     println("Olá, $nome")
 
+    val teste = """
+        aqui pode-se escrever
+        inumeras linhas de texto
+    """.trimIndent()
+    println(teste)
+
     val b1 = true
     val b2 = false
     val c1 = b1.and(b2)
