@@ -16,5 +16,9 @@ fun main() {
     val c1 = b1.and(b2)
     val c2 = b1.or(b2)
     val c3 = b1.not()
-    print("$c1 $c2 $c3")
+    println("$c1 $c2 $c3")
+
+    val arrayInt= arrayOf(1,2,3,4)
+    val x = arrayInt[2]
+    println("Posição do vetor 2: $x")
 }
