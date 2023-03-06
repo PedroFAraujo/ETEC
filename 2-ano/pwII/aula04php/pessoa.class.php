@@ -1,7 +1,7 @@
 <?php
 
 //Classe
-public class Pessoa(){
+class Pessoa{
     //Atributos
     private $nome;
     private $endereco;
@@ -11,7 +11,7 @@ public class Pessoa(){
     private $estado;
 
     //metodo GET nome
-    public fuction getNome(){
+    public function getNome(){
         return $this -> nome;
     }
 
@@ -21,7 +21,7 @@ public class Pessoa(){
     }
 
     //metodo GET endereco
-    public fuction getEndereco(){
+    public function getEndereco(){
         return $this -> endereco;
     }
 
@@ -31,7 +31,7 @@ public class Pessoa(){
     }
 
     //metodo GET bairro
-    public fuction getBairro(){
+    public function getBairro(){
         return $this -> bairro;
     }
 
@@ -41,7 +41,7 @@ public class Pessoa(){
     }
 
     //metodo GET cep
-    public fuction getCep(){
+    public function getCep(){
         return $this -> cep;
     }
 
@@ -51,7 +51,7 @@ public class Pessoa(){
     }
 
     //metodo GET cidade
-    public fuction getCidade(){
+    public function getCidade(){
         return $this -> cidade;
     }
 
@@ -61,7 +61,7 @@ public class Pessoa(){
     }
 
     //metodo GET estado
-    public fuction getEstado(){
+    public function getEstado(){
         return $this -> estado;
     }
 
@@ -69,8 +69,6 @@ public class Pessoa(){
     public function setEstado($estado){
         $this -> estado = $estado;
     }
-
-
 }
 
 ?>
