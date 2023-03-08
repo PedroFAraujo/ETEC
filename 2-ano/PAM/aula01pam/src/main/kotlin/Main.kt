@@ -18,7 +18,7 @@ fun main() {
     val c3 = b1.not()
     println("$c1 $c2 $c3")
 
-    val arrayInt= arrayOf(1,2,3,4)
+    val arrayInt = arrayOf(1,2,3,4)
     val x = arrayInt[2]
     println("Posição do vetor 2: $x")
 }
