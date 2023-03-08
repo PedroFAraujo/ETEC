@@ -1,6 +1,8 @@
 fun main(args: Array<String>) {
-    val base = 2
-    val altura = 5
+    print("Digite a base do triângulo: ")
+    val base = readLine()?.toDouble()!!
+    print("Digite a altura do triângulo: ")
+    val altura = readLine()?.toDouble()!!
     val area = (base*altura)/2
-    println("Área do triângulo = ${area.toDouble()}")
+    println("Área do triângulo = $area")
 }

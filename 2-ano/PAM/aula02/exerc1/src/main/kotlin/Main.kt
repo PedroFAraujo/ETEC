@@ -1,7 +1,9 @@
 
 fun main(args: Array<String>) {
-    val base = 3
-    val altura = 5
+    print("Digite a base do retângulo: ")
+    val base = readLine()?.toDouble()!!
+    print("Digite a altura do retângulo: ")
+    val altura = readLine()?.toDouble()!!
     val area = base*altura
     println("Área do retângulo = $area")
 }
