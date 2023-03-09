@@ -1,14 +1,20 @@
-*{
-    margin: 0;
+body{
+    background-color: rgb(185, 185, 185);
 }
 
-.header{
-    background-color: blue;
+#container{
+    padding: 0%;
+    background-color: white;
+}
+
+.fundo{
+    background-color: #087cfc;
     width: 100%;
 }
 
 .titles{
     text-align: left;
+    padding-left: 3%;
 }
 
 h1{
@@ -25,16 +31,34 @@ h1{
 }
 
 #cadastrar{
-    background-color: #087cfc;
+    background-color: #007bff;
     color: white;
     border-radius: 10px;
-    padding: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     border: 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.nav-link{
+    color: white;
+}
+
+#link-header{
+    color: white;
+}
+
+#row-form{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
 }
 
 #cadastrar:hover{
-    background-color: #086ad3;
+    background-color: #0475ee;
 }

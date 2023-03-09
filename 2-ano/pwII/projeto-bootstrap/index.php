@@ -11,10 +11,10 @@
     </head>
     <body>
         <main>
-        <div class="container text-center">
+        <div class="container" id="container">
             <div class="row">
                 <div class="col">
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary, fundo">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="index.php">SISTEMA WEB</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,7 +23,7 @@
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="index.php">Cadastrar</a>
+                                        <a class="nav-link active" id="link-header" aria-current="page" href="index.php">Cadastrar</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Consultar</a>
@@ -40,27 +40,30 @@
                     <p>Sistema Utilizado para agendamento de serviços</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="row-form">
                 <div class="col">
                 <form method="POST" action="teste.class.php">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+                        <label for="Nome" class="form-label">Nome:</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1 nome" name="nome" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Telefone: </label>
+                        <label for="Telefone" class="form-label">Telefone: </label>
                         <input type="tel" class="form-control" id="exampleFormControlInput1 telefone"  name="telefone" placeholder="(xx)xxxxx-xxxx" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Origem: </label>
-                        <input type="" class="form-control" id="exampleFormControlInput1 origem" name="origem" required>
+                        <label for="Origem" class="form-label">Origem: </label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="1">Celular</option>
+                            <option value="2">Fixo</option>
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Data do Contato: </label>
+                        <label for="Data" class="form-label">Data do Contato: </label>
                         <input type="date" class="form-control" id="exampleFormControlInput1 date" name="date" placeholder="(xx)xxxxx-xxxx" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Observação:</label>
+                        <label for="Observacao" class="form-label">Observação:</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1 obs" rows="3" name="obs"></textarea>
                     </div>
                     <input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
