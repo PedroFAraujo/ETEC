@@ -49,19 +49,19 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Telefone: </label>
-                        <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="(xx)xxxxx-xxxx" required>
+                        <input type="tel" class="form-control" id="exampleFormControlInput1 telefone"  name="telefone" placeholder="(xx)xxxxx-xxxx" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Origem: </label>
-                        <input type="" class="form-control" id="exampleFormControlInput1" required>
+                        <input type="" class="form-control" id="exampleFormControlInput1 origem" name="origem" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Data do Contato: </label>
-                        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="(xx)xxxxx-xxxx" required>
+                        <input type="date" class="form-control" id="exampleFormControlInput1 date" name="date" placeholder="(xx)xxxxx-xxxx" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Observação:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1 obs" rows="3" name="obs"></textarea>
                     </div>
                     <input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
                 </form>

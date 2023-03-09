@@ -10,6 +10,9 @@ class Teste{
 
         $pessoa->setNome($_POST['nome']);
         echo $pessoa->getNome();
+
+        $pessoa->setTelefone($_POST['telefone'])
+        echo $pessoa->getTelefone();
     }
 }new Teste();
 

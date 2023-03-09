@@ -4,11 +4,10 @@
 class Pessoa{
     //Atributos
     private $nome;
-    private $endereco;
-    private $bairro;
-    private $cep;
-    private $cidade;
-    private $estado;
+    private $telefone;
+    private $origem;
+    private $data;
+    private $observacao;
 
     //metodo GET nome
     public function getNome(){
@@ -20,55 +19,46 @@ class Pessoa{
         $this -> nome = $nome;
     }
 
-    //metodo GET endereco
-    public function getEndereco(){
-        return $this -> endereco;
+    //metodo GET telefone
+    public function getTelefone(){
+        return $this -> telefone;
     }
 
-    //metodo SET endereco
-    public function setEndereco($endereco){
-        $this -> endereco = $endereco;
+    //metodo SET telefone
+    public function setTelefone($telefone){
+        $this -> telefone = $telefone;
     }
 
-    //metodo GET bairro
-    public function getBairro(){
-        return $this -> bairro;
+    //metodo GET origem
+    public function getOrigem(){
+        return $this -> origem;
     }
 
-    //metodo SET bairro
-    public function setBairro($bairro){
-        $this -> bairro = $bairro;
+    //metodo SET origem
+    public function setOrigem($origem){
+        $this -> origem = $origem;
     }
 
-    //metodo GET cep
-    public function getCep(){
-        return $this -> cep;
+    //metodo GET data
+    public function getData(){
+        return $this -> data;
     }
 
-    //metodo SET cep
-    public function setCep($cep){
-        $this -> cep = $cep;
+    //metodo SET data
+    public function setData($data){
+        $this -> data = $data;
     }
 
-    //metodo GET cidade
-    public function getCidade(){
-        return $this -> cidade;
+    //metodo GET cidadObservacaoe
+    public function getObservacao(){
+        return $this -> observacao;
     }
 
-    //metodo SET cidade
-    public function setCidade($cidade){
-        $this -> cidade = $cidade;
+    //metodo SET Observacao
+    public function setObservacao($observacao){
+        $this -> observacao = $observacao;
     }
 
-    //metodo GET estado
-    public function getEstado(){
-        return $this -> estado;
-    }
-
-    //metodo SET estado
-    public function setEstado($estado){
-        $this -> estado = $estado;
-    }
 }
 
 ?>
