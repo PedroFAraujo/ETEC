@@ -47,53 +47,24 @@
                         <label for="exampleFormControlInput1" class="form-label">Nome:</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1 nome" name="nome" required>
                     </div>
-                    <input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
-                </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                <form method="POST" action="teste.class.php">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Telefone: </label>
                         <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="(xx)xxxxx-xxxx" required>
                     </div>
-                </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                <form method="POST" action="teste.class.php">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Origem: </label>
                         <input type="" class="form-control" id="exampleFormControlInput1" required>
                     </div>
-                </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                <form method="POST" action="teste.class.php">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Data do Contato: </label>
                         <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="(xx)xxxxx-xxxx" required>
                     </div>
-                </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <form method="POST" action="teste.class.php">
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Observação:</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    
+                    <input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
+                </form>
                 </div>
             </div>
         </div>
