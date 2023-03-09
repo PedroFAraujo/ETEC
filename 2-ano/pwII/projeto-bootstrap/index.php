@@ -49,13 +49,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="Telefone" class="form-label">Telefone: </label>
-                        <input type="tel" class="form-control" id="exampleFormControlInput1 telefone"  name="telefone" placeholder="(xx)xxxxx-xxxx" required>
+                        <input type="tel" class="form-control" id="exampleFormControlInput1 telefone" name="telefone" placeholder="(xx)xxxxx-xxxx" required>
                     </div>
                     <div class="mb-3">
                         <label for="Origem" class="form-label">Origem: </label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option value="1">Celular</option>
-                            <option value="2">Fixo</option>
+                        <select class="form-select" name="origem" id="origem" aria-label="Default select example">
+                            <option value="Celular">Celular</option>
+                            <option value="Fixo">Fixo</option>
                         </select>
                     </div>
                     <div class="mb-3">
