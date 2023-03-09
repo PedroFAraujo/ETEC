@@ -44,9 +44,10 @@
                 <div class="col">
                 <form method="POST" action="teste.class.php">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label"><span class="label-input">Nome:</span></label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" required>
+                        <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1 nome" name="nome" required>
                     </div>
+                    <input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
                 </form>
                 </div>
             </div>
@@ -55,7 +56,7 @@
                 <form method="POST" action="teste.class.php">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Telefone: </label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="(xx)xxxxx-xxxx" required>
+                        <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="(xx)xxxxx-xxxx" required>
                     </div>
                 </form>
                 </div>
@@ -92,7 +93,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <input type="button" value="Cadastrar" name="cadastrar" id="cadastrar">
+                    
                 </div>
             </div>
         </div>
