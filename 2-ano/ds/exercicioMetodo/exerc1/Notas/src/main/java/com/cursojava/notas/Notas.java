@@ -14,15 +14,15 @@ import javax.swing.JOptionPane;
 public class Notas {
    
     static void lerNota(){
-        float nota[] = new float[2];
+        float notaVet[] = new float[2];
         String nome = "";
         nome = JOptionPane.showInputDialog("Digite o nome: ");
-        nota[0] = Float.parseFloat(JOptionPane.showInputDialog("Digite a primeira nota: "));
-        nota[1] = Float.parseFloat(JOptionPane.showInputDialog("Digite a primeira nota: "));
+        notaVet[0] = Float.parseFloat(JOptionPane.showInputDialog("Digite a primeira nota: "));
+        notaVet[1] = Float.parseFloat(JOptionPane.showInputDialog("Digite a primeira nota: "));
         
         JOptionPane.showMessageDialog(null,"Nome: " + nome);
         
-        calcularMedia(nota[0], nota[1]);
+        calcularMedia(notaVet[0], notaVet[1]);
         
     }
     
