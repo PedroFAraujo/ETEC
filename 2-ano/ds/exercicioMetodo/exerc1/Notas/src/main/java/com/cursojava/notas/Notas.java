@@ -29,7 +29,7 @@ public class Notas {
     static void calcularMedia(float n1, float n2){
         float media = (n1+n2)/2;
         String situacao = "";
-        if(media>7){
+        if(media>=7){
             situacao = "Aprovado";
         } else{
             situacao = "Reprovado";
