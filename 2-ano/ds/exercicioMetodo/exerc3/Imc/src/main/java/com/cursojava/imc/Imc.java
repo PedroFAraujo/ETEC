@@ -3,10 +3,8 @@ package com.cursojava.imc;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Pedro
- */
+//@author Pedro
+ 
 public class Imc {
         public static void calcularPesoIdeal(){
             double altura = 0.0, peso = 0.0, imc = 0.0;
