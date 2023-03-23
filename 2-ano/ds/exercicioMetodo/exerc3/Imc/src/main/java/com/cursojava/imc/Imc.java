@@ -1,11 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
 
 package com.cursojava.imc;
 
-import static javax.management.Query.or;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,8 +13,27 @@ public class Imc {
             altura = Double.parseDouble(JOptionPane.showInputDialog("Digite sua altura:  (m)")); 
             peso = Double.parseDouble(JOptionPane.showInputDialog("Digite seu peso:  (kg)")); 
             imc = peso/(Math.pow(altura,2));
-            JOptionPane.showMessageDialog(null, "Seu IMC é de: " + imc);
-            }
+            String resultadoIMC = String.format("%.2f", imc);
+            JOptionPane.showMessageDialog(null, "Seu IMC é de: " + resultadoIMC);
+            
+            verificarPesoIdeal(imc);
+        }
+        
+        public static void verificarPesoIdeal(double iMc){
+            if (iMc < 18.5){
+                JOptionPane.showMessageDialog(null, "Abaixo do peso");
+            } else if(iMc >=18.5 && iMc <=24.9 ){
+                JOptionPane.showMessageDialog(null,"Peso Normal");
+            } else if(iMc >=25 && iMc <=29.9 ){
+               JOptionPane.showMessageDialog(null,"Excesso de peso");
+            } else if(iMc >=30 && iMc <=34.9 ){
+                JOptionPane.showMessageDialog(null,"Obesidade I");
+            } else if(iMc >=35 && iMc <=39.9 ){
+                JOptionPane.showMessageDialog(null,"Obesidade II");
+            } else if(iMc >=40){
+                JOptionPane.showMessageDialog(null,"Obesidade III");
+            } 
+        }
         
         public static void main(String[] args) {
             calcularPesoIdeal();
