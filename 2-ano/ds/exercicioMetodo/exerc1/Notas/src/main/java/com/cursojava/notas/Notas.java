@@ -18,7 +18,7 @@ public class Notas {
         String nome = "";
         nome = JOptionPane.showInputDialog("Digite o nome: ");
         notaVet[0] = Float.parseFloat(JOptionPane.showInputDialog("Digite a primeira nota: "));
-        notaVet[1] = Float.parseFloat(JOptionPane.showInputDialog("Digite a primeira nota: "));
+        notaVet[1] = Float.parseFloat(JOptionPane.showInputDialog("Digite a segunda nota: "));
         
         JOptionPane.showMessageDialog(null,"Nome: " + nome);
         
