@@ -14,24 +14,15 @@ import javax.swing.JOptionPane;
  */
 public class Imc {
         public static void calcularPesoIdeal(){
-            String sexo = "";
-            double altura = 0.0, imc = 0.0;
-
-            altura = Double.parseDouble(JOptionPane.showInputDialog("Digite sua altura"));
-            sexo = JOptionPane.showInputDialog("Digite seu sexo:   [masculino/feminino]");    
-            if ("masculino".equals(sexo) || "Masculino".equals(sexo)){
-                imc = (72.7*altura)-58;
-                JOptionPane.showMessageDialog(null, imc);
-
-            } else if ("feminino".equals(sexo) || "Feminino".equals(sexo)){
-                imc = (62.1*altura)-44.7;
-                JOptionPane.showMessageDialog(null, imc);
-            } else{
-                JOptionPane.showMessageDialog(null, "Sexo inválido");
+            double altura = 0.0, peso = 0.0, imc = 0.0;
+            altura = Double.parseDouble(JOptionPane.showInputDialog("Digite sua altura:  (m)")); 
+            peso = Double.parseDouble(JOptionPane.showInputDialog("Digite seu peso:  (kg)")); 
+            imc = peso/(Math.pow(altura,2));
+            JOptionPane.showMessageDialog(null, "Seu IMC é de: " + imc);
             }
+        
+        public static void main(String[] args) {
+            calcularPesoIdeal();
         }
-     
-    public static void main(String[] args) {
-        calcularPesoIdeal();
-    }
 }
+     
