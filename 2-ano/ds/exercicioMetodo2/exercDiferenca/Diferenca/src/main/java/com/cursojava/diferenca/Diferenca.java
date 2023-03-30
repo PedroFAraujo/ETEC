@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
 
 package com.cursojava.diferenca;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Pedro
- */
+//@author Pedro
+
 public class Diferenca { //criacao classe diferenca
      
     static void diferenca(){ //criacao do metodo diferenca
