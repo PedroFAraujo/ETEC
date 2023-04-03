@@ -13,6 +13,7 @@ public class MenuCalculos{
         if (calc == 0){
             switch (calc){
                 case 0:
+                    
                     System.exit(0);
                     break;
             }
