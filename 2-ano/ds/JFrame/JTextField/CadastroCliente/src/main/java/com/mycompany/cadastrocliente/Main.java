@@ -35,23 +35,23 @@ public class Main extends JFrame {
         txtCep = new TextField(8);
         
         //posicionando os JLabel na tela e declarando sua largura e altura
-        title.setBounds(50,0,200,20); //coluna, linha, largura, altura
-        nome.setBounds(50,20,40,20); 
-        cpf.setBounds(50,60,40,20);
-        rg.setBounds(50,100,80,20);
-        endereco.setBounds(50,140,80,20);
-        cidade.setBounds(50,60,40,20);
-        estado.setBounds(50,100,80,20);
-        cep.setBounds(50,140,80,20);
+        title.setBounds(110,10,200,20); //coluna, linha, largura, altura
+        nome.setBounds(50,40,40,20); 
+        cpf.setBounds(50,90,40,20);
+        rg.setBounds(50,140,80,20);
+        endereco.setBounds(50,190,80,20);
+        cidade.setBounds(50,240,60,20);
+        estado.setBounds(50,290,80,20);
+        cep.setBounds(50,340,80,20);
         
         //posicionamento dos TextField
-        txtNome.setBounds(150,20,150,20);
-        txtCpf.setBounds(150,60,150,20);
-        txtRg.setBounds(150,100,150,20);
-        txtEndereco.setBounds(150,140,150,20);
-        txtCidade.setBounds(150,60,150,20);
-        txtEstado.setBounds(150,100,150,20);
-        txtCep.setBounds(150,140,150,20);
+        txtNome.setBounds(50,60,250,20);
+        txtCpf.setBounds(50,110,250,20);
+        txtRg.setBounds(50,160,250,20);
+        txtEndereco.setBounds(50,210,250,20);
+        txtCidade.setBounds(50,260,250,20);
+        txtEstado.setBounds(50,310,250,20);
+        txtCep.setBounds(50,360,250,20);
         
         //foco no TextField
         txtNome.requestFocus();
@@ -85,7 +85,7 @@ public class Main extends JFrame {
         tela.add(cidade);
         tela.add(estado);
         tela.add(cep);
-        
+
         //adicionando os TextField na tela
         tela.add(txtNome);
         tela.add(txtCpf);
@@ -95,7 +95,10 @@ public class Main extends JFrame {
         tela.add(txtEstado);
         tela.add(txtCep);
         
-        setSize(400,600); //atribuindo um tamanho para tela
+        //cor na janela
+        tela.setBackground(new Color(216, 212, 196));
+        
+        setSize(400,450); //atribuindo um tamanho para tela
         setVisible(true); //janela visivel
         setLocationRelativeTo(null); //janela fixa
     }
