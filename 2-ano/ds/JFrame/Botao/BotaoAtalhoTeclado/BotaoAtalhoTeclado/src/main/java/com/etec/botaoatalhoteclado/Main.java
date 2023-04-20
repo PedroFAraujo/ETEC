@@ -1,15 +1,12 @@
-
-package com.mycompany.cadastrocliente;
-
-import javax.swing.*;
-import java.awt.*;
-import javax.swing.text.*;
-import java.awt.event.*;
-import java.text.*;
+package com.etec.botaoatalhoteclado;
 
 //@author Pedro
 
-public class Main extends JFrame {
+import javax.swing.*; 
+import java.awt.*;
+import java.awt.event.*;
+
+public class Main extends JFrame{
     public static void main(String[] args) {
         Util app = new Util(); //instancia do objeto
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //opções da janela
