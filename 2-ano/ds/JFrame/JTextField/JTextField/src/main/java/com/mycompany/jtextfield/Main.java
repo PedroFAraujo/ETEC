@@ -68,7 +68,7 @@ public class Main extends JFrame { //criação classe main herdando da JFrame
         
         setSize(400,250); //atribuindo um tamanho para tela
         setVisible(true); //janela visivel
-        setLocationRelativeTo(null); //janela fixa
+        setLocationRelativeTo(null); //janela no centro
     }
     
     public static void main(String[] args) {
