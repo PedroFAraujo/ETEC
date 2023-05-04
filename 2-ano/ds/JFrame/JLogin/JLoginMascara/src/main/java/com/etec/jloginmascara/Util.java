@@ -12,6 +12,7 @@ public class Util extends JFrame {
     JLabel lblCEP, lblTel, lblCPF, lblData;
     JFormattedTextField cep, tel, cpf, data;
     MaskFormatter mascaraCEP, mascaraTel, mascaraCPF, mascaraData;
+    JButton BTNCadastrar;
     
     public Util(){
         super("Máscara FormattedTextField"); //nome janela
@@ -24,12 +25,36 @@ public class Util extends JFrame {
         lblCPF = new JLabel("CPF");
         lblData = new JLabel("Data");
         
+        //atribuindo valor ao botao
+        BTNCadastrar = new JButton("Cadastrar");
+        
         //posicionamento dos JLabel
+        //coluna, linha, largura, altura
         lblCEP.setBounds(50,40,100,20);
         lblTel.setBounds(50,80,100,20);
         lblCPF.setBounds(50,120,100,20);
         lblData.setBounds(50,160,100,20);
         
+        //posicionando botao
+        //coluna, linha, largura, altura
+        BTNCadastrar.setBounds(150, 200, 100, 20);
+        
+        BTNCadastrar.addActionListener( //adiciona uma ação ao botão somar
+                new ActionListener(){ //cria a ação
+                    public void actionPerformed(ActionEvent e){ //e = evento de clique
+                        String cepAction, telAction, cpfAction, dataAction; //criação de variáveis
+                        
+                        //atribui o input da String dos 
+                        cepAction = (cep.getText());
+                        telAction = (tel.getText());
+                        cpfAction = (cpf.getText());
+                        dataAction = (data.getText());
+                        
+                        JOptionPane.showMessageDialog(null, "CEP: " + cepAction + "\n\nTelefone: " + telAction + "\n\nCEP: " + cpfAction + "\n\nData: " + dataAction );
+                    }
+                }
+        );
+         
         //atribuindo as máscaras
         try{
             mascaraCEP = new MaskFormatter("#####-###");
@@ -67,7 +92,10 @@ public class Util extends JFrame {
         tela.add(cpf);
         tela.add(data);
         
-        setSize(400,250); //tamanho da tela
+        //colocando JButton na tela
+        tela.add(BTNCadastrar);
+        
+        setSize(400,300); //tamanho da tela
         setVisible(true); //tela visível
         setLocationRelativeTo(null); //janela ao centro
         setResizable(false); //janela fixa
