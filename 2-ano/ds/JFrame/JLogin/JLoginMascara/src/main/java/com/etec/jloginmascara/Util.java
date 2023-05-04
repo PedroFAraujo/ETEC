@@ -44,7 +44,7 @@ public class Util extends JFrame {
                     public void actionPerformed(ActionEvent e){ //e = evento de clique
                         String cepAction, telAction, cpfAction, dataAction; //criação de variáveis
                         
-                        //atribui o input da String dos 
+                        //atribui o input da String dos JFormattedTextField para as variáveis
                         cepAction = (cep.getText());
                         telAction = (tel.getText());
                         cpfAction = (cpf.getText());
