@@ -1,4 +1,3 @@
-
 package com.mycompany.jtextfield;
 
 import javax.swing.*; //importação biblioteca javax.swing

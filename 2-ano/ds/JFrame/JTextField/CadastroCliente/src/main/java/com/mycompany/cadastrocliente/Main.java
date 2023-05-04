@@ -1,4 +1,3 @@
-
 package com.mycompany.cadastrocliente;
 
 import javax.swing.*;
