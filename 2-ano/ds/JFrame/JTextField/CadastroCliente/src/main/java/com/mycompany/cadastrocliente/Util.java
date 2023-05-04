@@ -31,8 +31,6 @@ public class Util extends JFrame {
         telefone = new JLabel("Telefone"); 
         data = new JLabel("Data"); 
         
-        
-        
         //posicionando os JLabel na tela e declarando sua largura e altura
         title.setBounds(110,10,200,20); //coluna, linha, largura, altura
         nome.setBounds(50,40,40,20); 
