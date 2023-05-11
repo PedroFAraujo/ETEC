@@ -51,8 +51,8 @@ public class JLogin extends JFrame{
         senhaBOX.setBounds(20, 90, 350, 25);
         
         //posicionamento dos JButton na tela
-        okBtn.setBounds(20, 180, 50,30);
-        cancelarBtn.setBounds(80, 180, 80,30);
+        okBtn.setBounds(20, 200, 50,30);
+        cancelarBtn.setBounds(20, 250, 80,30);
         
         //adicionando os JLabel na tela
         tela.add(nome);
