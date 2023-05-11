@@ -1,4 +1,3 @@
-
 package com.mycompany.jtextfield;
 
 import javax.swing.*; //importação biblioteca javax.swing
@@ -21,7 +20,7 @@ public class Main extends JFrame { //criação classe main herdando da JFrame
         telefone = new JLabel("Telefone");
         celular = new JLabel("Celular"); 
         
-        //atribuindo quantidade caractere TextField
+        //atribuindo tamanho do TextField
         txtNome = new TextField(50);
         txtIdade = new TextField(3);
         txtTelefone = new TextField(10);
