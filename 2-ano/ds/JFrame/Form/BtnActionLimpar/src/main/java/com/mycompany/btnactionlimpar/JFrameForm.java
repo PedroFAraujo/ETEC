@@ -37,11 +37,11 @@ public class JFrameForm extends javax.swing.JFrame {
         txtNome = new javax.swing.JTextField();
         txtEndereco = new javax.swing.JTextField();
         txtCidade = new javax.swing.JTextField();
-        txtCEP = new javax.swing.JTextField();
         jcbListaEstado = new javax.swing.JComboBox<>();
         btnLimpar = new javax.swing.JButton();
         btnCadastrar = new javax.swing.JButton();
         btnFechar = new javax.swing.JButton();
+        txtCEP = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,8 +68,6 @@ public class JFrameForm extends javax.swing.JFrame {
         txtEndereco.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         txtCidade.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
-
-        txtCEP.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
         jcbListaEstado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jcbListaEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins" }));
@@ -98,6 +96,12 @@ public class JFrameForm extends javax.swing.JFrame {
             }
         });
 
+        try {
+            txtCEP.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -115,21 +119,21 @@ public class JFrameForm extends javax.swing.JFrame {
                             .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtEndereco)
-                                    .addComponent(txtCidade)
-                                    .addComponent(txtNome)
-                                    .addComponent(txtCEP)
-                                    .addComponent(jcbListaEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(7, 7, 7)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblTitle)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(btnCadastrar)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btnFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addComponent(btnFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtEndereco)
+                                    .addComponent(txtCidade)
+                                    .addComponent(txtNome)
+                                    .addComponent(jcbListaEstado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(txtCEP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(69, 69, 69))
         );
         layout.setVerticalGroup(
@@ -156,13 +160,13 @@ public class JFrameForm extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCEP)
-                    .addComponent(txtCEP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
+                    .addComponent(txtCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         pack();
@@ -242,7 +246,7 @@ public class JFrameForm extends javax.swing.JFrame {
     private javax.swing.JLabel lblEstado;
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JTextField txtCEP;
+    private javax.swing.JFormattedTextField txtCEP;
     private javax.swing.JTextField txtCidade;
     private javax.swing.JTextField txtEndereco;
     private javax.swing.JTextField txtNome;
