@@ -15,6 +15,7 @@ public class JFrameForm extends javax.swing.JFrame {
      */
     public JFrameForm() {
         initComponents();
+        jcbListaEstado.setEditable(rootPaneCheckingEnabled);
     }
 
     /**
