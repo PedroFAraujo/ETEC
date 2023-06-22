@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
  * @author dti
  */
 public class JFrameForm extends javax.swing.JFrame {
-    Integer estilo, tamanhoFonte;
+    Integer estilo = Font.PLAIN, tamanhoFonte = 12;
     
     
     /**
@@ -114,23 +114,27 @@ public class JFrameForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chbNegritoItalico)
-                    .addComponent(chbRegular)
-                    .addComponent(chbItalico)
-                    .addComponent(chbNegrito)
-                    .addComponent(cbCor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCor)
-                    .addComponent(lblEstilo)
-                    .addComponent(lblTamanho)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(rbtn12)
-                        .addGap(36, 36, 36)
-                        .addComponent(rbtn14))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(chbNegritoItalico)
+                            .addComponent(chbRegular)
+                            .addComponent(chbNegrito)
+                            .addComponent(cbCor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblCor)
+                            .addComponent(lblEstilo)
+                            .addComponent(lblTamanho)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(rbtn12)
+                                .addGap(36, 36, 36)
+                                .addComponent(rbtn14))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(rbtn16)
+                                .addGap(38, 38, 38)
+                                .addComponent(rbtn18)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(rbtn16)
-                        .addGap(38, 38, 38)
-                        .addComponent(rbtn18)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(chbItalico)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,7 +151,7 @@ public class JFrameForm extends javax.swing.JFrame {
                 .addComponent(chbNegrito)
                 .addGap(18, 18, 18)
                 .addComponent(chbItalico)
-                .addGap(18, 18, 18)
+                .addGap(21, 21, 21)
                 .addComponent(chbRegular)
                 .addGap(16, 16, 16)
                 .addComponent(chbNegritoItalico)
@@ -161,43 +165,51 @@ public class JFrameForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbtn16)
                     .addComponent(rbtn18))
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void cbCorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCorActionPerformed
         cbCor.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                if(cbCor.getSelectedItem().toString() == "Sem Cor"){
-                    lblTitle.setForeground(Color.black);
-                }else if(cbCor.getSelectedItem().toString() == "Vermelho"){
-                    lblTitle.setForeground(Color.red);
-                }else if(cbCor.getSelectedItem().toString() == "Azul"){
-                    lblTitle.setForeground(Color.blue);
-                }else if(cbCor.getSelectedItem().toString() == "Verde"){
-                    lblTitle.setForeground(Color.green);
-                }else if(cbCor.getSelectedItem().toString() == "Amarelo"){
-                    lblTitle.setForeground(Color.yellow);
-                }else if(cbCor.getSelectedItem().toString() == "Branco"){
-                    lblTitle.setForeground(Color.white);
-                }else if(cbCor.getSelectedItem().toString() == "Preto"){
-                    lblTitle.setForeground(Color.black);
+                if(null != cbCor.getSelectedItem().toString())switch (cbCor.getSelectedItem().toString()) {
+                    case "Sem Cor":
+                        lblTitle.setForeground(Color.black);
+                        break;
+                    case "Vermelho":
+                        lblTitle.setForeground(Color.red);
+                        break;
+                    case "Azul":
+                        lblTitle.setForeground(Color.blue);
+                        break;
+                    case "Verde":
+                        lblTitle.setForeground(Color.green);
+                        break;
+                    case "Amarelo":
+                        lblTitle.setForeground(Color.yellow);
+                        break;
+                    case "Branco":
+                        lblTitle.setForeground(Color.white);
+                        break;
+                    case "Preto":
+                        lblTitle.setForeground(Color.black);
+                        break;
+                    default:
+                        break;
                 }
             }
         });
     }//GEN-LAST:event_cbCorActionPerformed
 
     private void chbNegritoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chbNegritoActionPerformed
-        chbNegrito.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                estilo = Font.BOLD;
-                chbItalico.setSelected(false);
-                chbNegritoItalico.setSelected(false);
-                chbRegular.setSelected(false);
-                lblTitle.setFont(new Font("", estilo, 24));
-            }
+        chbNegrito.addActionListener((ActionEvent e) -> {
+            estilo = Font.BOLD;
+            chbItalico.setSelected(false);
+            chbNegritoItalico.setSelected(false);
+            chbRegular.setSelected(false);
+            lblTitle.setFont(new Font("", estilo, tamanhoFonte));
         });
     }//GEN-LAST:event_chbNegritoActionPerformed
 
@@ -244,7 +256,7 @@ public class JFrameForm extends javax.swing.JFrame {
                 chbRegular.setSelected(false);
                 chbNegritoItalico.setSelected(false);
                 chbNegrito.setSelected(false);
-                lblTitle.setFont(new Font("", estilo, 24));
+                lblTitle.setFont(new Font("", estilo, tamanhoFonte));
             }
         });
     }

@@ -31,26 +31,33 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="chbNegritoItalico" min="-2" max="-2" attributes="0"/>
-                  <Component id="chbRegular" min="-2" max="-2" attributes="0"/>
-                  <Component id="chbItalico" min="-2" max="-2" attributes="0"/>
-                  <Component id="chbNegrito" min="-2" max="-2" attributes="0"/>
-                  <Component id="cbCor" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblCor" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblEstilo" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblTamanho" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="rbtn12" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="rbtn14" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="chbNegritoItalico" min="-2" max="-2" attributes="0"/>
+                          <Component id="chbRegular" min="-2" max="-2" attributes="0"/>
+                          <Component id="chbNegrito" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbCor" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCor" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblEstilo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblTamanho" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="rbtn12" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="rbtn14" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="rbtn16" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="rbtn18" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="rbtn16" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="rbtn18" min="-2" max="-2" attributes="0"/>
+                      <Component id="chbItalico" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -69,7 +76,7 @@
               <Component id="chbNegrito" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
               <Component id="chbItalico" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Component id="chbRegular" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               <Component id="chbNegritoItalico" min="-2" max="-2" attributes="0"/>
@@ -85,7 +92,7 @@
                   <Component id="rbtn16" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="rbtn18" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace pref="31" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
