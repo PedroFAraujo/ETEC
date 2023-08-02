@@ -1,11 +1,18 @@
 package com.example.debugplayground
 
 import android.os.Bundle
+import android.service.controls.ControlsProviderService.TAG
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -14,7 +21,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import com.example.debugplayground.ui.theme.DebugButtonColors
 import com.example.debugplayground.ui.theme.DebugPlaygroundTheme
+import com.example.debugplayground.ui.theme.ErrorButtonColors
+import com.example.debugplayground.ui.theme.InfoButtonColors
+import com.example.debugplayground.ui.theme.WarningButtonColors
+import java.lang.Exception
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,16 +42,17 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Composable
 private fun App(){ //mover a função da classe
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
     ) {
-        Column {
+        Column (
             //Alinhamento vertical e horizontal
-            verticalArrangement = Arrangement.SpacteEvenly,
+            verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.CenterHorizontally
-        }{
+        ){
             Greeting("Playground") //Alterando a Preview
             //Adicionar ação para o botão
             ActionButton(
@@ -47,31 +62,31 @@ private fun App(){ //mover a função da classe
             ){
                 Log.d(TAG, "Clicou em Debug")
             }
-                ActionButton(
-                    text = "Info",
-                    buttonColors = InfoButtonColors(),
-                    modifier = Modifier.fillMaxWidth(0.5f)
-                ){
-                    Log.d(TAG, "Clicou em Info!")
+            ActionButton(
+                text = "Info",
+                buttonColors = InfoButtonColors(),
+                modifier = Modifier.fillMaxWidth(0.5f)
+            ){
+                Log.d(TAG, "Clicou em Info!")
+            }
+            ActionButton(
+                text = "Warning",
+                buttonColors = WarningButtonColors(),
+                modifier = Modifier.fillMaxWidth(0.5f)
+            ){
+                Log.d(TAG, "Clicou em Warning!",)
+            }
+            ActionButton(
+                text = "Error",
+                buttonColors = ErrorButtonColors(),
+                modifier = Modifier.fillMaxWidth(0.5f)
+            ){ //tratar ação para evitar de derrubar App
+                try{
+                    throw java.lang.RuntimeException("Clicou em ERROR")
+                } catch (ex : Exception){
+                    Log.e(TAG, "${ex.message}",)
                 }
-                ActionButton(
-                    text = "Warning",
-                    buttonColors = WarningButtonColors(),
-                    modifier = Modifier.fillMaxWidth(0.5f)
-                ){
-                    Log.d(TAG, "Clicou em Warning!",)
-                }
-                ActionButton(
-                    text = "Error",
-                    buttonColors = ErrorButtonColors(),
-                    modifier = Modifier.fillMaxWidth(0.5f)
-                ){ //tratar ação para evitar de derrubar App
-                    try{
-                        throw java.lang.RuntimeException("Clicou em ERROR")
-                    } catch (ex : Exception){
-                        Log.e(TAG, "${ex.message}",)
-                    }
-                }
+            }
         }
     }
 }

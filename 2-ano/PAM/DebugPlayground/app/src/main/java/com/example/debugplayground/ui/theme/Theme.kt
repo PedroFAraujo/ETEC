@@ -3,6 +3,7 @@ package com.example.debugplayground.ui.theme
 import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
@@ -70,32 +71,29 @@ fun DebugPlaygroundTheme(
 }
 
 //criando um novo composable para os botoes
-@Composable
 //criando a funcao customizada para os botoes
+@Composable
 fun DebugButtonColors() = ButtonDefaults.buttonColors(
     containerColor = DarkGreen
 )
 
-@Composable
+
 //criando a funcao customizada para os botoes
+@Composable
 fun WarningButtonColors() = ButtonDefaults.buttonColors(
     containerColor = DarkOrange
 )
 
-@Composable
+
 //criando a funcao customizada para os botoes
+@Composable
 fun ErrorButtonColors() = ButtonDefaults.buttonColors(
     containerColor = DarkGreen
 )
 
-@Composable
-//criando a funcao customizada para os botoes
-fun DebugButtonColors() = ButtonDefaults.buttonColors(
-    containerColor = DarkRed
-)
 
-@Composable
 //criando a funcao customizada para os botoes
+@Composable
 fun InfoButtonColors() = ButtonDefaults.buttonColors(
-    containerColor = DarkBlue
+    containerColor = DarkRed
 )
