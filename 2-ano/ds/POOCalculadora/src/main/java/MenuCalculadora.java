@@ -56,17 +56,17 @@ public class MenuCalculadora {
                 break;
             case 2:
                 calculadora.subtrair(num1,num2);
-                saida = "Resultado da soma: " + calculadora.getResultado();
+                saida = "Resultado da subtração: " + calculadora.getResultado();
                 io.saidaDados(saida);
                 break;
             case 3:
                 calculadora.multiplicar(num1,num2);
-                saida = "Resultado da soma: " + calculadora.getResultado();
+                saida = "Resultado da multiplicação: " + calculadora.getResultado();
                 io.saidaDados(saida);
                 break;
             case 4:
                 calculadora.dividir(num1,num2);
-                saida = "Resultado da soma: " + calculadora.getResultado();
+                saida = "Resultado da divisão: " + calculadora.getResultado();
                 io.saidaDados(saida);
                 break;
             case 5:
