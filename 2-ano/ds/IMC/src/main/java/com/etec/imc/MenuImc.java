@@ -3,9 +3,6 @@ package com.etec.imc;
 
 // @author Pedro
 
-import javax.swing.JOptionPane;
-
-
 public class MenuImc {
     private Situacao situacao;
     private IMC imc;
@@ -37,35 +34,33 @@ public class MenuImc {
             +"\n 3 - Calcular IMC"
             +"\n 4 - Vefificar Situação"
             +"\n 5 - Sair";
-        String entradaDados = io.entradaDados(mensagemMenu); 
-        this.opcao = conversor.stringToInt(entradaDados); //conversao da string da opcao do calculo para inteiro 
+        String opcao = io.entradaDados(mensagemMenu); 
+        this.opcao = conversor.stringToInt(opcao); //conversao da string da opcao do calculo para inteiro 
     }
     
-     //metodo que verifica se a opcao escolhida esta entre 1 e 4 e diferente de 0, se sim vai armazenar os valores e efetuar o calculo da opcao escolhida
+     //metodo que verifica a opção escolhida e faz uma ação conforme o número da ação
     public void avaliarOpcaoEscolhida(){
-        String saida;
-        double peso = 0, altura = 0;
-        if(this.opcao != 0 && this.opcao <= 4){
-            String mensagemEntrada = "Digite o peso: ";
-            peso = conversor.stringToDouble(io.entradaDados(mensagemEntrada));
-            imc.setPeso(peso);
-            String mensagemEntradea = "Digite a altura: ";
-            altura = conversor.stringToDouble(io.entradaDados(mensagemEntrada));
-            imc.setAltura(altura);
-        }
-        
-        switch(this.opcao){
-            case 1:
-                imc.cadastrarDados(peso, altura);
-                break;
-            case 2:
-                JOptionPane.showMessageDialog(null, "Peso: " + imc.getPeso());
-                JOptionPane.showMessageDialog(null, "Altura: " + imc.getAltura());
-                break;
-            
-            default:
-                io.saidaDados("Opção Inválida");
-                break;
+            switch(this.opcao){
+                case 1:
+                    imc.cadastrarDados(conversor.stringToDouble(io.entradaDados("Digite seu peso: ")), conversor.stringToDouble(io.entradaDados("Digite sua altura: ")));
+                    break;
+                case 2:
+                    io.saidaDados("Peso: " + imc.getPeso() + "\nAltura: " + imc.getAltura());
+                    break;
+                case 3:
+                       imc.calcularImc();
+                       io.saidaDados("IMC: " + imc.getImc());
+                    break;
+                case 4: 
+                    situacao.VerificarSituacao(imc);
+                    io.saidaDados("Situação: " + situacao.getSituacao());
+                    break;
+                case 5: 
+                    io.saidaDados("Finalizando programa...");
+                    System.exit(0);
+                default:
+                    io.saidaDados("Opção Inválida");
+                    break;
         }
     }
     
