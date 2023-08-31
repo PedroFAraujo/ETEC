@@ -356,7 +356,7 @@ public class FrmTela extends javax.swing.JFrame {
             mostrarDados();
             
         }catch(SQLException erro){
-            JOptionPane.showMessageDialog(null, "Não foi possível acessar o primeiro registro: "+erro, "Mensagemos do programa: ", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Não foi possível acessar o registro: "+erro, "Mensagemos do programa: ", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_btnVoltarRegistroActionPerformed
 
@@ -371,7 +371,7 @@ public class FrmTela extends javax.swing.JFrame {
             mostrarDados();
             
         }catch(SQLException erro){
-            JOptionPane.showMessageDialog(null, "Não foi possível acessar o primeiro registro: "+erro, "Mensagemos do programa: ", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Não foi possível acessar o registro: "+erro, "Mensagemos do programa: ", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_btnAvancarRegistroActionPerformed
 
