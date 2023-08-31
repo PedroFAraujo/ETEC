@@ -20,6 +20,7 @@ public class Conexao {
     public Statement statement; //variável para exsecução dos comandos SQL dentro do ambiete Java
     public ResultSet resultset; //variável que armazenará o resultado da execução de um comando SQL
     
+    //método para conetar com o banco de dados
     public boolean conecta(){
         boolean result = true;
         try{
@@ -36,13 +37,15 @@ public class Conexao {
         return result;
     }
     
+    //método para desconectar com o banco de dados
     public void descontecta(){
         try{
             conexao.close();
             JOptionPane.showMessageDialog(null, "Conexão com o banco fechada", "Mensagem do Programa", JOptionPane.INFORMATION_MESSAGE);
-        }catch(SQLException fecha){}
+        }catch(SQLException fecha){}//a conexão é encerrada
     }
     
+    //método para executar querys em SQL
     public void executaSQL(String sql){
         try{
             statement = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
